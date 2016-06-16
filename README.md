@@ -7,10 +7,11 @@ Features Of WebPosts application
 =========================================
 
 The Webposts Application  written using the .NET 4.5, WPF technology and C# language.
+
 Also used below assemblies for the development of application.
 Newtonsoft.Json for accessing webservice
 Microsoft.Expression.Interactions for envoking command from xaml
-System.Windows.Interactivity for envoking command from xaml by
+System.Windows.Interactivity for envoking command from xaml b
 
 WebPosts application shows all post with post id and post title of rest based webserbice.
 
