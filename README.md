@@ -15,9 +15,9 @@ Also used below assemblies for the development of application.
 
 Features Of WebPosts application
 =========================================
-WebPosts application shows all post with post id and post title of rest based webserbice.
+WebPosts application shows all post with post id and post title from a webservice.
 
-WebPosts application shows web post content on the selection of webpost diplayed in list.
+WebPosts application shows web post content on the selection of webpost displayed in list.
 
 WebPosts application shows selected web post user information who had created the web post.
 
