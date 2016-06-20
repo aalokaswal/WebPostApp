@@ -1,4 +1,4 @@
-﻿using Microsoft.Win32;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -163,6 +163,8 @@ namespace WebPosts.ViewModel
                 var webPost = (WebPost)value;
                 if (webPost != null)
                 {
+                    selectedWebPost = webPost;
+                    OnPropertyChanged("SelectedWebPost");
                     webPostTitle = webPost.title;
                     OnPropertyChanged("WebPostTitle");
 
@@ -227,8 +229,8 @@ namespace WebPosts.ViewModel
                     var sw = new StreamWriter(myStream, uniEncoding);
                     if(fileExtension == "html")
                     {
-                        var webPost = await objWebPostBl.GetWebPost(UserId);
-                        var webPostComments = await objWebPostBl.GetWebPostComments(UserId);
+                        var webPost = await objWebPostBl.GetWebPost(SelectedWebPost.id.ToString());
+                        var webPostComments = await objWebPostBl.GetWebPostComments(SelectedWebPost.id.ToString());
                         var webPostList = new List<WebPost>();
                         webPostList.Add(webPost);
                         var webPostHtml = Conversion.GetHtml((IEnumerable<WebPost>)webPostList,"WebPost", x => x.id, x => x.title, x => x.body);
